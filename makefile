@@ -3,8 +3,8 @@ CXXFLAGS = -Wall
 OBJECTS = Entity.o Area.o Game.o Zerg.o Zergling.o Mutalisk.o Hydralisk.o Terran.o Marine.o Ghost.o Battlecruiser.o
 IODIR = ../../proj4_IO
 
-proj4: $(OBJECTS) proj4.cpp
-	$(CXX) $(CXXFLAGS) $(OBJECTS) proj4.cpp -o proj4
+proj4: $(OBJECTS) main.cpp
+	$(CXX) $(CXXFLAGS) $(OBJECTS) main.cpp -o proj4
 
 Entity.o: Entity.cpp Entity.h
 	$(CXX) $(CXXFLAGS)  -c Entity.cpp
